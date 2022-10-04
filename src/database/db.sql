@@ -2,33 +2,33 @@ CREATE DATABASE database_luba;
 
 USE database_luba;
 
-CREATE TABLE ussers(
+CREATE TABLE admins(
     id INT(13) NOT NULL,
     username VARCHAR(16) NOT NULL,
     password VARCHAR(60) NOT NULL,
     fullname VARCHAR(100) NOT NULL
 )
 
-ALTER TABLE ussers
+ALTER TABLE admins
     ADD PRIMARY KEY (id);
 
-ALTER TABLE ussers
+ALTER TABLE admins
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;
 
-DESCRIBE ussers;
+DESCRIBE admins;
 
-CREATE TABLE fors(
+CREATE TABLE user(
     id INT(11) NOT NULL,
     number VARCHAR(2) NOT NULL,
-    usserFor TEXT,
+    usserName TEXT,
     usserDNI INT(8),
     payed TEXT,
-    created_at timestamp NOT NULL DEFAULT current_timestamp,
-    CONSTRAINT fk_user FOREIGN KEY (usserDNI) REFERENCES ussers(id)
+    joined_at timestamp NOT NULL DEFAULT current_timestamp,
+    CONSTRAINT fk_user FOREIGN KEY (usserDNI) REFERENCES admins(id)
 );
 
-ALTER TABLE fors
+ALTER TABLE user
      ADD PRIMARY KEY (id);
 
-ALTER TABLE fors
+ALTER TABLE user
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;

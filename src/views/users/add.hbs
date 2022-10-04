@@ -1,0 +1,50 @@
+<div class="container p-4">
+       <div class="row">
+              <div class="col-md-8 mx-auto">
+                     <div class="card">
+                            <div class="card-body">
+                                   <form action="/users/add" method="POST">
+                                          <div class="elements-group">
+                                                 <h4>Personal information</h4>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-user-alt m-2"></i>First name and last name</label>
+                                                        <input type="text" class="form-control" name="fullName">
+                                                        <div class="form-text">Names and surnames</div>
+                                                 </div>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-id-card m-2"></i>DNI number</label>
+                                                        <input type="text" class="form-control" name="DNInumber">
+                                                        <div id="emailHelp" class="form-text"><b>8 digit</b> DNI number</div>
+                                                 </div>
+                                          </div>
+                                          <div class="elements-group">
+                                                 <h4>Travel information</h4>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-sync-alt m-2"></i>Where does it come from?</label>
+                                                        <input type="text" class="form-control" name="from">
+                                                 </div>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-sync-alt m-2"></i>Where it goes?</label>
+                                                        <input type="text" class="form-control" name="to">
+                                                 </div>
+                                          </div>
+                                          <div class="elements-group">
+                                                 <h4>Service information</h4>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-bed m-2"></i>Room number</label>
+                                                        <input type="number" class="form-control" name="room" id="">
+                                                        <div id="emailHelp" class="form-text">Rooms from <b>4</b> to <b>14</b></div>
+                                                 </div>
+                                                 <div class="mb-3">
+                                                        <label class="form-label"><i class="fas fa-money-bill-wave m-2"></i>Payed room?</label>
+                                                        <input type="text" class="form-control" name="payed">
+                                                        <div id="emailHelp" class="form-text">Answer with <b>yes</b> or <b>no</b></div>
+                                                 </div>
+                                          </div>
+                                          <div class="center"><button type="submit" class="btn btn-success btn-block">Register</button></div>
+                                   </form>
+                            </div>
+                     </div>
+              </div>
+       </div>
+</div>

@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 // Routes
 app.use(require('./routes'));
 app.use(require('./routes/autentications'));
-app.use('/links', require('./routes/links'));
+app.use('/users', require('./routes/users'));
 
 // Public
 app.use(express.static(path.join(__dirname, 'public')));

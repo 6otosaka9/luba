@@ -4,7 +4,7 @@
             host: 'localhost',
             user: 'root',
             password: 'otosaka',
-            database: 'database_luba'
+            database: 'luba_database'
         }
 
     };

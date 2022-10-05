@@ -5,43 +5,43 @@
                             <div class="card-body">
                                    <form action="/users/add" method="POST">
                                           <div class="elements-group">
-                                                 <h4>Personal information</h4>
+                                                 <h4 class="text-success data-title">Personal information</h4>
                                                  <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-user-alt m-2"></i>First name and last name</label>
-                                                        <input type="text" class="form-control" name="fullName">
-                                                        <div class="form-text">Names and surnames</div>
+                                                        <label class="form-label data-req"><i class="fas fa-user-alt data-title"></i>First name and last name</label>
+                                                        <input type="text" class="form-control data-input" name="fullName">
+                                                        <div class="form-text data-helper">Names and surnames</div>
                                                  </div>
                                                  <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-id-card m-2"></i>DNI number</label>
-                                                        <input type="text" class="form-control" name="DNInumber">
-                                                        <div id="emailHelp" class="form-text"><b>8 digit</b> DNI number</div>
-                                                 </div>
-                                          </div>
-                                          <div class="elements-group">
-                                                 <h4>Travel information</h4>
-                                                 <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-sync-alt m-2"></i>Where does it come from?</label>
-                                                        <input type="text" class="form-control" name="from">
-                                                 </div>
-                                                 <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-sync-alt m-2"></i>Where it goes?</label>
-                                                        <input type="text" class="form-control" name="to">
+                                                        <label class="form-label data-req"><i class="fas fa-id-card data-title"></i>DNI number</label>
+                                                        <input type="number" class="form-control data-input" name="DNInumber">
+                                                        <div id="emailHelp" class="form-text data-helper"><b>8 digit</b> DNI number</div>
                                                  </div>
                                           </div>
                                           <div class="elements-group">
-                                                 <h4>Service information</h4>
+                                                 <h4 class="text-success data-title">Travel information</h4>
                                                  <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-bed m-2"></i>Room number</label>
-                                                        <input type="number" class="form-control" name="room" id="">
-                                                        <div id="emailHelp" class="form-text">Rooms from <b>4</b> to <b>14</b></div>
+                                                        <label class="form-label data-req"><i class="fas fa-sync-alt data-title"></i>Where does it come from?</label>
+                                                        <input type="text" class="form-control data-input" name="from">
                                                  </div>
                                                  <div class="mb-3">
-                                                        <label class="form-label"><i class="fas fa-money-bill-wave m-2"></i>Payed room?</label>
-                                                        <input type="text" class="form-control" name="payed">
-                                                        <div id="emailHelp" class="form-text">Answer with <b>yes</b> or <b>no</b></div>
+                                                        <label class="form-label data-req"><i class="fas fa-sync-alt data-title"></i>Where it goes?</label>
+                                                        <input type="text" class="form-control data-input" name="to">
                                                  </div>
                                           </div>
-                                          <div class="center"><button type="submit" class="btn btn-success btn-block">Register</button></div>
+                                          <div class="elements-group">
+                                                 <h4 class="text-success data-title">Service information</h4>
+                                                 <div class="mb-3">
+                                                        <label class="form-label data-req"><i class="fas fa-bed data-title"></i>Room number</label>
+                                                        <input type="number" class="form-control data-input" name="room" id="">
+                                                        <div id="emailHelp" class="form-text data-helper">Rooms from <b>4</b> to <b>14</b></div>
+                                                 </div>
+                                                 <div class="mb-3">
+                                                        <label class="form-label data-req"><i class="fas fa-money-bill-wave data-title"></i>Payed room?</label>
+                                                        <input type="text" class="form-control data-input" name="payed">
+                                                        <div id="emailHelp" class="form-text data-helper">Answer with <b>yes</b> or <b>no</b></div>
+                                                 </div>
+                                          </div>
+                                          <div class="center"><button type="submit" class="btn btn-success">Register</button></div>
                                    </form>
                             </div>
                      </div>

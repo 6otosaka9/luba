@@ -5,4 +5,8 @@ router.get('/login', (req, res) => {
        res.render('auth/signup');
 });
 
+router.get('/register', (req, res) => {
+       res.render('auth/register');
+});
+
 module.exports = router;

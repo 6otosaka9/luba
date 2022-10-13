@@ -9,4 +9,8 @@ router.get('/register', (req, res) => {
        res.render('auth/register');
 });
 
+router.post('/register', (req, res) => {
+       res.send("recieved")
+});
+
 module.exports = router;

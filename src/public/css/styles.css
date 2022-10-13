@@ -10,17 +10,9 @@
 body {
        background: #33CCCC; /* Fallback */
        animation: color 9s infinite linear;
-       text-align: center;
        padding: 2em;
 }
-h1 {
-       text-align: center;
-       font-family: 'Kavoon', sans-serif;
-       font-size: 2.5em;
-       color: white;
-}
 
-     
 .center {
        text-align: center;
 }

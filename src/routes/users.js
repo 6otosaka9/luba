@@ -8,15 +8,23 @@ router.get('/add', (req, res) => {
        res.render('users/add')
 });
 
-router.post('/add', (req, res) => {
+router.post('/add', async (req, res) => {
        res.send('received')
-       const data = req.body;
+       const {userName, userDNI, fromv, tov, room, amount} = req.body;
 
-       if (data.payed == "si") {
-              data.payed = true;
-       } else if (data.payed == "no") data.payed = false;
+       const newUser = {
+              userName,
+              userDNI: parseInt(userDNI),
+              fromv,
+              tov,
+              room: parseInt(room),
+              amount: parseInt(amount),
+              archivated: false
+       };
 
-       console.log(data)
+       console.log(newUser)
+       await pool.query('INSERT INTO users set ?', [newUser])
 });
+
 
 module.exports = router;

@@ -1,6 +1,6 @@
-CREATE DATABASE database_luba;
+CREATE DATABASE lubaDB;
 
-USE database_luba;
+USE lubaDB;
 
 CREATE TABLE admins(
     id INT(13) NOT NULL,
@@ -17,18 +17,22 @@ ALTER TABLE admins
 
 DESCRIBE admins;
 
-CREATE TABLE user(
+CREATE TABLE users(
     id INT(11) NOT NULL,
-    number VARCHAR(2) NOT NULL,
-    usserName TEXT,
-    usserDNI INT(8),
-    payed TEXT,
+    room INT(2) NOT NULL,
+    userName TEXT,
+    userDNI INT(8),
+    admin_id INT(11),
+    amount INT(255),
+    fromv TEXT,
+    tov TEXT,
+    archivated BOOLEAN,
     joined_at timestamp NOT NULL DEFAULT current_timestamp,
-    CONSTRAINT fk_user FOREIGN KEY (usserDNI) REFERENCES admins(id)
+    CONSTRAINT fk_admin FOREIGN KEY (admin_id) REFERENCES admins(id)
 );
 
-ALTER TABLE user
+ALTER TABLE users
      ADD PRIMARY KEY (id);
 
-ALTER TABLE user
+ALTER TABLE users
     MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT = 2;

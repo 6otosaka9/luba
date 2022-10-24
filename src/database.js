@@ -1,29 +1,4 @@
-const mysql = require('mysql');
-const { promisify } = require('util');
+const mongoose = require('mongoose');
 
-const { database } = require('./keys');
-
-
-const pool = mysql.createPool(database);
-
-pool.getConnection((err, connection) => {
-    if(err) {
-        if(err.code === 'PROTOCOL_CONNECTION_LOST') {
-                console.log('DATABASE CONNECTION WAS CLOSED');
-        }
-        if(err.code === 'ER_COUNT_ERROR') {
-            console.log('DATABASE HAS TO MANY CONNECTIONS');
-        }
-        if(err.code === 'ENCONNREFUSED') {
-            console.log('DATABASE CONNECTION WAS REFUSED');
-        }
-    }
-
-    if(connection) connection.release();
-    console.log('DB is Connected');
-    return;
-});
-
-promisify(pool.query);
-
-module.exports = pool;
+mongoose.connect('mongodb+srv://oto:otodb@cluster0.zwnj30i.mongodb.net/?retryWrites=true&w=majority').then(db => console.log('db is connected'))
+    .catch(err => console.error(err))

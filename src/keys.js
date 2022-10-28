@@ -1,5 +1,5 @@
     module.exports = {
         mongodb: {
-            URI: process.env.MONGOURL
+            URI: 'mongodb+srv://otosaka:otosaka@cluster0.tvsiqzs.mongodb.net/?retryWrites=true&w=majority'
         }
     };

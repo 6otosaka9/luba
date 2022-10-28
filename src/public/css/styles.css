@@ -1,47 +1,14 @@
 @keyframes color {
-       0%   { background: #33CCCC; }
-       20%  { background: #33CC36; }
-       40%  { background: #B8CC33; }
-       60%  { background: #FCCA00; }
-       80%  { background: #33CC36; }
-       100% { background: #33CCCC; }
-     }
-     
-body {
-       background: #33CCCC; /* Fallback */
-       animation: color 9s infinite linear;
-       padding: 2em;
-}
-
-.center {
-       text-align: center;
-}
-
-.elements-group {
-       background-color: #e8e8e8;
-       margin-top: 2rem;
-       border-radius: 10px;
-}
-
-.data-input {
-       width: 48.7rem;
-       margin-left: 1.3rem;
-}
-.data-title {
-       margin-left: 0.5rem;
-       margin-right: 7px;
-}
-
-.data-helper {
-       margin-left: 1.3rem;
-}
-
-.data-req {
-       margin-left: 1rem;
-}
-i {
-       background-color: #ffffff;
-       font-size: 1.1rem;
-       border-radius: 25%;
-}
-
+    0%   { background: #33CCCC; }
+    20%  { background: #33CC36; }
+    40%  { background: #B8CC33; }
+    60%  { background: #FCCA00; }
+    80%  { background: #33CC36; }
+    100% { background: #33CCCC; }
+  }
+  
+  body {
+    background: #33CCCC; /* Fallback */
+    animation: color 9s infinite linear;
+    padding: 2em;
+  }

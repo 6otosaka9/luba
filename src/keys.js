@@ -1,8 +1,5 @@
     module.exports = {
-        database: {
-            host: 'localhost',
-            user: 'root',
-            password: 'otosaka',
-            database: 'database_luba'
+        mongodb: {
+            URI: 'mongodb+srv://otosaka:otosaka@cluster0.tvsiqzs.mongodb.net/?retryWrites=true&w=majority'
         }
     };

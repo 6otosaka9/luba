@@ -1,0 +1,37 @@
+{{#if users}}
+<div class="container center mt-3"><a href="/users/download/excel" class="btn btn-success btn-lg active fs-6" role="button" aria-pressed="true"><i class="fas fa-file-excel bg-transparent m-1"></i>Download Excel format</a></div>
+
+<table class="table center m-3">
+    
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">DNI Number</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Room</th>
+            <th scope="col">amount</th>
+            <th scope="col">Registered by</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+{{/if}}
+        {{#each users}}
+        <tr>
+            <td> {{fullName}} </td>
+            <td> {{userDni}} </td>
+            <td> {{from}} </td>
+            <td> {{to}} </td>
+            <td> {{room}} </td>
+            <td> {{amount}} </td>
+            <td> {{adminName}} </td>  
+            {{#if archivated}}
+            <td><a href="/users/unarchive/{{_id}}" class="m-1 btn btn-success btn-lg active btn-sm"><i class="fas fa-upload bg-transparent fs-6 me-1"></i>Desarchivate</a><a href="/users/delete/{{_id}}" class="m-1 btn btn-danger btn-lg active btn-sm"><i class="fas fa-trash bg-transparent fs-6 me-1"></i>Delete</a></td>
+            {{else }}
+            <td><a href="/users/archive/{{_id}}" class="m-1 btn btn-warning btn-lg active btn-sm"><i class="fas fa-download bg-transparent fs-6 me-1"></i>Archivate</a><a href="/users/delete/{{_id}}" class="m-1 btn btn-danger btn-lg active btn-sm"><i class="fas fa-trash bg-transparent fs-6 me-1"></i>Delete</a></td>
+            {{/if}}
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -40,15 +40,11 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Global Variables
 app.use( async (req, res, next) => {
     app.locals.signupMessage = req.flash('signupMessage');
     app.locals.signinMessage = req.flash('signinMessage');
     app.locals.user = req.user;
-    next();
-})
-
-// Global Variables
-app.use((req, res, next) => {
     next();
 })
 

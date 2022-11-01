@@ -27,7 +27,7 @@ router.post('/add', async (req, res) => {
        res.redirect('/users/list');
 });
 
-router.get('/list', isLoggedIn, async (req, res) => {
+router.get('/list', async (req, res) => {
        const users = await userDb.find().lean();
        const Users = []
        for (let i in users) {
@@ -39,12 +39,12 @@ router.get('/list', isLoggedIn, async (req, res) => {
        res.render('users/list', {users: users})
 });
 
-router.get('/archive/:id', isLoggedIn, async (req, res) => {
+router.get('/archive/:id', async (req, res) => {
        await userDb.findByIdAndUpdate(req.params.id, {$set: {archivated: true}})
        res.redirect('/users/list');
 });
 
-router.get('/unarchive/:id', isLoggedIn, async (req, res) => {
+router.get('/unarchive/:id', async (req, res) => {
        await userDb.findByIdAndUpdate(req.params.id, {$set: {archivated: false}})
        res.redirect('/users/list');
 });
@@ -54,12 +54,12 @@ router.get('/unarchive/:id', isLoggedIn, async (req, res) => {
        res.redirect('/users/list');
 }); */
 
-router.get('/delete/:id', isLoggedIn, async (req, res) => {
+router.get('/delete/:id', async (req, res) => {
        await userDb.findByIdAndDelete(req.params.id)
        res.redirect('/users/list');
 });
 
-router.get('/download/excel', isLoggedIn, async (req, res) => {
+router.get('/download/excel', async (req, res) => {
        const users = await userDb.find().lean();
        const DATA = [];
        for (let i in users) {

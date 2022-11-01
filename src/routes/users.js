@@ -36,7 +36,6 @@ router.get('/list', isLoggedIn, async (req, res) => {
               data.adminName = admin.fullName;
               Users.push(data);
        }
-       console.log(Users)
        res.render('users/list', {users: users})
 });
 
